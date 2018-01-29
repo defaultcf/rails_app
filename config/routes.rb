@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "dashboard", to: "pages#dashboard"
 
   get "@:name", to: "user_profile#show", as: "user_profile_show"
+  get "user_profile", to: "user_profile#index"
   get "user_profile/edit"
   match "user_profile/update", via: [:post, :patch]
 
